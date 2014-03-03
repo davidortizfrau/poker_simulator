@@ -6,15 +6,15 @@
 
 == Instructions
 
-Clone to your desired directory
+Clone to your desired directory.
 
   $ git clone https://github.com/davidortizfrau/poker_simulator.git
 
-Move into the poker_simulator directory
+Move into the poker_simulator directory.
 
   $ cd poker_simulator/
 
-To get colorized output install gem (Optional)
+Install gem to get colorized output.
 
   poker_simulator $ sudo gem install colorize
   
