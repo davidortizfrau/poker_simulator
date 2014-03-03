@@ -2,7 +2,7 @@ require 'colorize'
 
 module PokerHands
   
-  def pair(hand)
+  def multiple(hand)
     f = hand.faces_array
     f.select do |face|
       case f.count(face)

@@ -26,8 +26,11 @@ class Game
 	end
 
 	def deal
-		@deck.shuffle
-		@deck.deal(self.players)
+		shuffled_deck = @deck.shuffle
+		self.players.times do
+			hand = shuffled_deck.pop(5)
+			Hand.new(hand)
+		end
 
 		puts "Play Again? (y/n)"
 
@@ -42,6 +45,4 @@ class Game
 	def play_again
 		Game.new
 	end
-
-
 end

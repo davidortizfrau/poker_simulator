@@ -18,12 +18,4 @@ class Deck
 	def shuffle
 		self.cards.shuffle!
 	end
-
-	def deal(players)
-		shuffled_deck = self.shuffle
-		players.times do
-			hand = shuffled_deck.pop(5)
-			Hand.new(hand)
-		end
-	end
 end
