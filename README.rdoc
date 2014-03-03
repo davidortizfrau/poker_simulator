@@ -1,20 +1,19 @@
-# Welcome to my Poker Simulator
+= Welcome to my Poker Simulator
 
-> Programing is as much about communicating with your coworkers as writing code that will run <br/>
-> -- Russ Olsen / Eloquent Ruby
+"Programing is as much about communicating with your coworkers as writing code that will run" 
 
-## Instructions
+-- Russ Olsen / Eloquent Ruby
+
+== Instructions
 
 To start program run this command from the poker directory.
 	
-```bash
-poker $ ruby init.rb 
-```
+  poker $ ruby init.rb 
+
 
 To get colorized output install gem
 
-```bash
-poker $ sudo gem install colorize
-```
+  poker $ sudo gem install colorize
+
 
 
