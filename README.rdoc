@@ -6,14 +6,22 @@
 
 == Instructions
 
-To start program run this command from the poker directory.
-	
-  poker $ ruby init.rb 
+Clone to your desired directory
 
+  $ git clone https://github.com/davidortizfrau/poker_simulator.git
 
-To get colorized output install gem
+Move into the poker_simulator directory
 
-  poker $ sudo gem install colorize
+  $ cd poker_simulator/
+
+To get colorized output install gem (Optional)
+
+  poker_simulator $ sudo gem install colorize
+  
+To start program run this command from the poker_simulator directory. Must have ruby version 1.9.3 or higher.
+  
+  poker_simulator $ ruby init.rb 
+
 
 
 
