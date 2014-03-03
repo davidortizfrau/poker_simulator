@@ -1,10 +1,19 @@
-== Welcome to my Poker Simulator
+# Welcome to my Poker Simulator
 
-Instructions:
-To start program run this command from the poker directory
+> "Programing is as much about communicating with your coworkers as writing code that will run" <br/>
+> -- Russ Olsen / Eloquent Ruby
+
+## Instructions
+To start program run this command from the poker directory.
 	
-	$ ruby init.rb 
+	```bash
+  poker $ ruby init.rb 
+  ```
 
 To get colorized output install gem
 
-	$ sudo gem install colorize
+	```bash
+  poker $ sudo gem install colorize
+  ```
+
+
