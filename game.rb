@@ -3,10 +3,10 @@ load 'card.rb'
 load 'hand.rb'
 
 class Game
-	attr_accessor :players
+	attr_accessor :players, :deck
 
 	def initialize
-		@deck = Deck.new
+		self.deck = Deck.new
 		how_many_players
 	end
 
@@ -26,10 +26,10 @@ class Game
 	end
 
 	def deal
-		shuffled_deck = @deck.shuffle
-		self.players.times do
+		shuffled_deck = self.deck.shuffle
+		(1..self.players).each do |i|
 			hand = shuffled_deck.pop(5)
-			Hand.new(hand)
+			Hand.new(hand, i)
 		end
 
 		puts "Play Again? (y/n)"

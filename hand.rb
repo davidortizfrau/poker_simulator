@@ -4,7 +4,7 @@ class Hand
 	include PokerHands
 	attr_accessor :cards 
 
-	def initialize(cards)
+	def initialize(cards, palyer)
 		# cards is an array of Card objects created when 
 		# calling the deal() method on a Deck object
 		self.cards = cards.sort_by! { |i| i.value }
@@ -13,7 +13,7 @@ class Hand
 		self.cards.each do |c|
 			visual_hand.push("#{c.face}#{c.suit}")
 		end
-		puts "Hand: #{visual_hand.join(" ")} "
+		puts "Hand #{palyer}: #{visual_hand.join(" ")} "
 		puts "#{evaluate}" 
 	end
 
