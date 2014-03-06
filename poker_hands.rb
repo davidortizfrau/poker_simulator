@@ -2,20 +2,20 @@ require 'colorize'
 
 module PokerHands
   
-  def multiple(hand)
-    f = hand.faces_array
-    f.select do |face|
-      case f.count(face)
+  def multiple
+    faces = self.faces_array
+    faces.each do |face|
+      case faces.count(face)
       when 4
         puts "Four of #{face}s".yellow
         break
       when 3
-        f.delete(face)
-        full_house(f, face)
+        faces.delete(face)
+        full_house(faces, face)
         break
       when 2
-        f.delete(face)
-        two_pair(f, face)
+        faces.delete(face)
+        two_pair(faces, face)
         break
       end
     end

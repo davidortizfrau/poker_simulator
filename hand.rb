@@ -44,7 +44,7 @@ class Hand
 private
 	
 	def evaluate
-		multiple(self)
+		multiple
 		straight(self)
 		flush(self)
 	end

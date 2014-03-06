@@ -12,13 +12,17 @@ class Game
 
 	def how_many_players
 		puts "How many Players?"
-
-		input = gets.chomp
+		players = gets.chomp
 		puts ""
-		self.players = input.to_i
+		self.players = players.to_i
+		players_allowed
+	end
 
-		if input.to_i >= 2 && input.to_i <= 10
-			self.deal
+	def players_allowed
+		minimum_players = 2
+		maximum_players = 10
+		if self.players >= minimum_players && self.players <= maximum_players
+			deal
 		else
 			puts "please type 2-10 players"
 			how_many_players
@@ -31,18 +35,12 @@ class Game
 			hand = shuffled_deck.pop(5)
 			Hand.new(hand, i)
 		end
-
-		puts "Play Again? (y/n)"
-
-		input = gets.chomp
-		if input == 'y'
-			play_again
-		else
-			exit
-		end
+		play_again
 	end
 
 	def play_again
-		Game.new
+		puts "Play Again? (y/n)"
+		input = gets.chomp
+		input == 'y' ? Game.new : exit
 	end
 end
